@@ -7,9 +7,11 @@ import java.util.HashMap;
 import java.util.Random;
 
 /*
+ * Implement a set-like data structure that supports Insert, Remove, and GetRandomElement efficiently.
+ *
  * Assumptions:
  * - Can't use a Set, okay to use List, Maps
- * - Efficient structure = order of insert and remove's is 1 or constant
+ * - Efficient structure = order of insert and remove's is in constant time
  * - The inserted items are not maintained in sorted order
  */
 
@@ -20,9 +22,13 @@ public class SetDataStructure
 
     public static void main(String[] args)
     {
+        System.out.println("*** test() ***");
         test();
+        System.out.println("*** test1() ***");
         test1();
+        System.out.println("*** testNull() ***");
         testNull();
+        System.out.println("*** testEmpty() ***");
         testEmpty();
     }
 
@@ -35,15 +41,18 @@ public class SetDataStructure
         set.insert(6);
         set.insert(8);
 
+        System.out.println("*** Content after inserts");
         SetDataStructure.printSet(set);
 
         set.remove(6);
 
+        System.out.println("*** Content after removing one element");
         SetDataStructure.printSet(set);
 
-        System.out.println("set.getRandom() = " + set.getRandom());
-        System.out.println("set.getRandom() = " + set.getRandom());
-        System.out.println("set.getRandom() = " + set.getRandom());
+        System.out.println("*** Get random element");
+        System.out.println("set.getRandomElement() = " + set.getRandomElement());
+        System.out.println("set.getRandomElement() = " + set.getRandomElement());
+        System.out.println("set.getRandomElement() = " + set.getRandomElement());
     }
 
     public static void test1()
@@ -52,15 +61,18 @@ public class SetDataStructure
 
         set.insert(1);
 
+        System.out.println("*** Content after inserts");
         SetDataStructure.printSet(set);
 
         set.remove(1);
 
+        System.out.println("*** Content after removing one element");
         SetDataStructure.printSet(set);
 
-        System.out.println("set.getRandom() = " + set.getRandom());
-        System.out.println("set.getRandom() = " + set.getRandom());
-        System.out.println("set.getRandom() = " + set.getRandom());
+        System.out.println("*** Get random element");
+        System.out.println("set.getRandomElement() = " + set.getRandomElement());
+        System.out.println("set.getRandomElement() = " + set.getRandomElement());
+        System.out.println("set.getRandomElement() = " + set.getRandomElement());
     }
 
     public static void testNull()
@@ -73,15 +85,18 @@ public class SetDataStructure
         set.insert(8);
         set.insert(null);
 
+        System.out.println("*** Content after inserts");
         SetDataStructure.printSet(set);
 
         set.remove(6);
 
+        System.out.println("*** Content after removing one element");
         SetDataStructure.printSet(set);
 
-        System.out.println("set.getRandom() = " + set.getRandom());
-        System.out.println("set.getRandom() = " + set.getRandom());
-        System.out.println("set.getRandom() = " + set.getRandom());
+        System.out.println("*** Get random element");
+        System.out.println("set.getRandomElement() = " + set.getRandomElement());
+        System.out.println("set.getRandomElement() = " + set.getRandomElement());
+        System.out.println("set.getRandomElement() = " + set.getRandomElement());
     }
 
     public static void testEmpty()
@@ -90,15 +105,22 @@ public class SetDataStructure
 
         set.remove(1);
 
+        System.out.println("*** Content after removing an element from an empty structure");
         SetDataStructure.printSet(set);
 
-        System.out.println("set.getRandom() = " + set.getRandom());
-        System.out.println("set.getRandom() = " + set.getRandom());
-        System.out.println("set.getRandom() = " + set.getRandom());
+        System.out.println("*** Get random element");
+        System.out.println("set.getRandomElement() = " + set.getRandomElement());
+        System.out.println("set.getRandomElement() = " + set.getRandomElement());
+        System.out.println("set.getRandomElement() = " + set.getRandomElement());
     }
 
     public static void printSet(SetDataStructure set)
     {
+        if (set.size() == 0)
+        {
+            System.out.println("Empty set");
+        }
+
         for (int i = 0; i < set.size(); i++)
         {
             System.out.println("set.get(" + i + ") = " + set.get(i));
@@ -125,7 +147,7 @@ public class SetDataStructure
         }
     }
 
-    public Integer getRandom()
+    public Integer getRandomElement()
     {
         Random random = new Random();
 
