@@ -3,6 +3,13 @@ package org.naithani.examples;
 import java.util.Map;
 import java.util.HashMap;
 
+/*
+ * Given an array of integers, determine whether or not there exist two elements in the 
+ * array (at different positions) whose sum is equal to some target value.
+ *
+ * Two implemenations - one with polynomial time complexity, the other linear
+ */
+
 public class TwoElementsExist
 {
     public static void main(String[] args)
@@ -17,12 +24,14 @@ public class TwoElementsExist
 
         TwoElementsExist twoElementsExist = new TwoElementsExist();
 
+        System.out.println("*** doesExist() ***");
         System.out.println(twoElementsExist.doesExist(array1, target));
         System.out.println(twoElementsExist.doesExist(array2, target));
         System.out.println(twoElementsExist.doesExist(array3, target));
         System.out.println(twoElementsExist.doesExist(array4, target));
         System.out.println(twoElementsExist.doesExist(array5, target));
 
+        System.out.println("*** doesExist2() ***");
         System.out.println(twoElementsExist.doesExist2(array1, target));
         System.out.println(twoElementsExist.doesExist2(array2, target));
         System.out.println(twoElementsExist.doesExist2(array3, target));
@@ -30,6 +39,10 @@ public class TwoElementsExist
         System.out.println(twoElementsExist.doesExist2(array5, target));
     }
 
+
+    /*
+     * O(n x n ) time, O(n) space 
+     */
     private boolean doesExist(int[] array, int target)
     {
         if (array == null)
@@ -55,11 +68,12 @@ public class TwoElementsExist
             index++;
         }
 
-        System.out.println(String.join("count = ", count + ""));
-
         return false;
     }
 
+    /*
+     * O(n) time, O(n) space 
+     */
     private boolean doesExist2(int[] array, int target)
     {
         if (array == null)
@@ -83,8 +97,6 @@ public class TwoElementsExist
 
             count++;
         }
-
-        System.out.println(String.join("count = ", count + ""));
 
         return false;
     }
