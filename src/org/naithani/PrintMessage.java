@@ -11,12 +11,11 @@ public class PrintMessage
         "to come to the aid of their country."
     };
 
-    Stream<String> stream 
-            = Stream.of(
-                "It is time,", 
-                "for all good men and women,", 
-                "to come to the aid of their country."
-                );
+    private static Stream<String> stream  = Stream.of(
+         "It is time,", 
+         "for all good men and women,",
+         "to come to the aid of their country."
+    );
 
     private void printMessageMethodReference()
     {
