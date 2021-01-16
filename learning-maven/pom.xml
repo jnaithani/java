@@ -4,13 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.frankmoley.lil</groupId>
+    <groupId>org.naithani</groupId>
     <artifactId>learning-maven</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>learning-maven-presidents</module>
+        <module>hello-world</module>
     </modules>
 
     <build>
