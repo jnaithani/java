@@ -9,7 +9,7 @@
     <description>This project is part of the LinkedIn Learning course Learning Apache Maven.</description>
 
     <parent>
-        <groupId>com.frankmoley.lil</groupId>
+        <groupId>org.naithani</groupId>
         <artifactId>learning-maven</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
