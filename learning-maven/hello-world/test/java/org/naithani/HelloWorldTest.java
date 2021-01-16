@@ -7,8 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class HelloWorldTest {
 
     @Test
-    void getPresidents() {
+    void helloWorldTest() {
         HelloWorld helloWorld = new HelloWorld();
+        
         assertNotNull(helloWorld);
     }
 }
