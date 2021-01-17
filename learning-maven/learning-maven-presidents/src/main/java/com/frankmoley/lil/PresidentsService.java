@@ -54,5 +54,9 @@ public class PresidentsService {
         LOGGER.info("Presidents have been loaded");
     }
 
+    public static void main(String[] args) {
+        PresidentsService service = new PresidentsService();
+        service.getPresidents().forEach(System.out::println);
+    }
 
 }
