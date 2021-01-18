@@ -36,6 +36,21 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                  <mainClass>org.naithani.HelloWorldHandler</mainClass>
+                </configuration>
+              </plugin>        
         </plugins>
     </build>
 
@@ -90,6 +105,17 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-junit-jupiter</artifactId>
         </dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+		<dependency>
+    		<groupId>javax.servlet</groupId>
+		    <artifactId>servlet-api</artifactId>
+        </dependency>
+             
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+        </dependency>          
     </dependencies>
 
 </project>
