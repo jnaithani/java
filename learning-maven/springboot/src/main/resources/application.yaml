@@ -1,0 +1,15 @@
+spring:
+    config:
+        activate:
+            on-profile: dev
+name: dev-yaml
+server:
+  port: 8080
+---
+spring:
+    config:
+        activate:
+            on-profile: test
+name: test-yaml
+server:
+  port: 9000
