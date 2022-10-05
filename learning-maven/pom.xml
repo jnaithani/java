@@ -15,12 +15,12 @@
     </modules>
 
     <properties>
-        <jackson.version>2.9.8</jackson.version>
+        <jackson.version>2.13.4</jackson.version>
         <slf4j.version>1.7.25</slf4j.version>
         <junit.jupiter.verison>5.7.0</junit.jupiter.verison>
         <java.version>11</java.version>
         <surefire.version>3.0.0-M3</surefire.version>
-	    <jettyVersion>7.2.0.v20101020</jettyVersion>
+	    <jettyVersion>9.4.47.v20220610</jettyVersion>
     </properties>
 
     <dependencyManagement>
