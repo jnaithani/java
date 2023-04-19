@@ -20,7 +20,7 @@
         <junit.jupiter.verison>5.7.0</junit.jupiter.verison>
         <java.version>11</java.version>
         <surefire.version>3.0.0-M3</surefire.version>
-	    <jettyVersion>7.2.0.v20101020</jettyVersion>
+	    <jettyVersion>9.4.51.v20230217</jettyVersion>
     </properties>
 
     <dependencyManagement>
